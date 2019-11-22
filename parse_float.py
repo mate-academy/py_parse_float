@@ -1,3 +1,11 @@
-def parse(s: str) -> bool:
+"""parse_float module"""
+import re
 
-    return False
+
+def parse(strng: str) -> bool:
+    """
+    Returns True if given string
+    is valid float-point number,
+    otherwise returns False
+    """
+    return bool(re.match(r"^-?\d+\.?\d+?$", strng))
