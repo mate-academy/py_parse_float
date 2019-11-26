@@ -7,13 +7,7 @@ def parse(strg: str) -> bool:
     func
     """
 
-    if not strg:
-        return False
-
-    if '-' in strg[1:]:
-        return False
-
-    if strg.count('.') > 1:
+    if not strg or strg.count('.') > 1 or '-' in strg[1:]:
         return False
 
     for i in strg:
